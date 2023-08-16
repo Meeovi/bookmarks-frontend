@@ -1,5 +1,5 @@
 
-import { defuFn } from 'C:/Users/sehilton/Documents/github/Portfolio/Collaborrate/node_modules/defu/dist/defu.mjs'
+import { defuFn } from 'C:/Users/sehilton/Documents/github/Portfolio/bookmarks-frontend/node_modules/defu/dist/defu.mjs'
 
 const inlineConfig = {}
 

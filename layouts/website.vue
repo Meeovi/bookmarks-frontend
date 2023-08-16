@@ -2,7 +2,7 @@
     <v-app :theme="theme">
         <v-app-bar id="topnav" density="compact">
             <v-app-bar-title><a class="logobrand" href="/">
-                    <v-icon start icon="fas fa-comments"></v-icon>Collaborrate
+                    <v-icon start icon="fas fa-bookmark"></v-icon>Bookmarks
                 </a></v-app-bar-title>
 
             <v-list-item title="Home" value="Home" href="/"></v-list-item>

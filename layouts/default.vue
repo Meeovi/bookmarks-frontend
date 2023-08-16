@@ -8,7 +8,7 @@
       </template>
 
       <v-app-bar-title><a class="logobrand" href="/app/">
-          <v-icon start icon="fas fa-comments"></v-icon> Collaborrate
+          <v-icon start icon="fas fa-bookmark"></v-icon> Bookmarks
         </a></v-app-bar-title>
 
       <v-text-field density="compact" variant="solo" label="Search" append-inner-icon="fas fa-search" single-line
@@ -20,19 +20,7 @@
           <v-btn :prepend-icon="theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon'" @click="onClick"></v-btn>
         </v-col>
         <v-col>
-          <v-menu :location="location" transition="slide-y-transition">
-            <template v-slot:activator="{ props }">
-              <v-btn variant="flat" v-bind="props">
-                <v-icon start icon="fas fa-clock-rotate-left"></v-icon>
-              </v-btn>
-            </template>
-            <v-list>
-              <v-list-item title="" value="" href="/"></v-list-item>
-              <v-divider></v-divider>
-              <v-list-item title="Show More" value="Show More" href="/admin/user/notifications">
-              </v-list-item>
-            </v-list>
-          </v-menu>
+            <v-btn icon="fas fa-clock-rotate-left" title="Activities" size="small" href="/app/activities"></v-btn>
         </v-col>
 
         <v-col>
@@ -58,15 +46,17 @@
       <v-card>
         <v-layout>
           <v-navigation-drawer v-model="drawer" permanent>
-            <v-list-item prepend-icon="fas fa-users-between-lines" href="/app/crm/"></v-list-item>
-            <v-list-item prepend-icon="fas fa-comments" href="/app/messenger/"></v-list-item>
-            <v-list-item prepend-icon="fas fa-diagram-project" href="/app/projects/"></v-list-item>
-            <v-list-item prepend-icon="fas fa-list" href="/app/lists/"></v-list-item>
-            <v-spacer></v-spacer>
+            <v-list-item prepend-icon="fas fa-home" href="/app/"></v-list-item>
 
-            <v-list density="compact" nav>
-              <v-list-item prepend-icon="fas fa-plus" value="Add Channel"></v-list-item>
-            </v-list>
+            <v-list-item prepend-icon="fas fa-bookmark" href="/app/bookmarks/"></v-list-item>
+
+            <v-list-item prepend-icon="fas fa-hard-drive" href="/app/drive/"></v-list-item>
+
+            <v-list-item prepend-icon="fas fa-square-check" href="/app/tasks"></v-list-item>
+
+            <v-list-item prepend-icon="fas fa-trash-can" href="/app/trash"></v-list-item>
+
+            <v-list-item prepend-icon="fas fa-bullhorn" href="/app/announcements"></v-list-item>
           </v-navigation-drawer>
           <v-main id="sidebarNav"></v-main>
           <main id="mainSection">

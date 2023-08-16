@@ -1,9 +1,9 @@
 <template>
     <v-row justify="center">
-        <v-dialog v-model="dialog" fullscreen :scrim="false" transition="dialog-bottom-transition" persistent>
+        <v-dialog v-model="dialog" :scrim="false" transition="dialog-bottom-transition" persistent>
             <template v-slot:activator="{ props }">
                 <v-btn v-bind="props" class="rightAddBtn">
-                    <v-icon start icon="fas fa-plus"></v-icon>Add Project
+                    <v-icon start icon="fas fa-plus"></v-icon>Add Bookmark
                 </v-btn>
             </template>
             <v-card>
@@ -13,30 +13,21 @@
                             <v-icon icon="fas fa-circle-xmark"></v-icon>
                         </v-btn>
                         <v-card-title>
-                            <span class="text-h6">Create new Project</span>
+                            <span class="text-h6">Create new Bookmark</span>
                         </v-card-title>
                     </v-toolbar>
                     <v-card-text>
                         <v-container>
                             <v-row>
                                 <v-col cols="6">
-                                    <v-text-field v-model="name" id="categoryName" label="Category Name*" required></v-text-field>
+                                    <v-text-field v-model="name" id="categoryName" label="Bookmark Name*" required></v-text-field>
                                 </v-col>
                                 <v-col cols="6">
-                                    <v-textarea v-model="content" label="Description" id="categoryDescription">
-                                    </v-textarea>
-                                </v-col>
-                                <v-col cols="6">
-                                    <v-text-field v-model="meta_title" label="Meta Name" id="categoryName"></v-text-field>
-                                </v-col>
-                                <v-col cols="6">
-                                    <v-text-field v-model="meta_keywords" label="Meta Keywords"></v-text-field>
+                                    <v-text-field type="url" v-model="name" id="categoryName" label="Bookmark Link*" required></v-text-field>
                                 </v-col>
                                 <v-col cols="12">
-                                    <v-textarea v-model="meta_description" label="Meta Description" id="categoryDescription"></v-textarea>
-                                </v-col>
-                                <v-col cols="12" sm="6">
-                                    <v-file-input accept="image/*" label="Category Image"></v-file-input>
+                                    <v-textarea v-model="content" label="Leave A Note" id="categoryDescription">
+                                    </v-textarea>
                                 </v-col>
                             </v-row>
                         </v-container>
